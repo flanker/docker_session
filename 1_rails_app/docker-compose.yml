@@ -1,0 +1,36 @@
+---
+base:
+  build: .
+  volumes:
+    - ".:/work"
+  ports:
+    - "4000:4000"
+  environment:
+    RAILS_ENV: development
+    DB_HOST: devdb
+    DB_DATABASE: app_development
+    DB_USER: db_user
+    DB_PASSWORD: db_password
+
+web:
+  extends:
+    file: docker-compose.yml
+    service: base
+  links:
+    - devdb
+  command: rails s -b0.0.0.0 -p4000
+
+rake:
+  extends:
+    file: docker-compose.yml
+    service: base
+  links:
+    - devdb
+  entrypoint: rake
+
+devdb:
+  image: postgres
+  environment:
+    POSTGRES_DB: app_development
+    POSTGRES_USER: db_user
+    POSTGRES_PASSWORD: db_password
