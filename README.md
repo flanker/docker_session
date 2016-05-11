@@ -1,6 +1,6 @@
 # Docker Session
 
-## Step 0 setup docker environment
+## Step 0 install docker
 
 Install `VirtualBox` if you don't have it.
 
@@ -14,13 +14,6 @@ Install docker tools on Mac OS. (via brew)
 
 ```
 brew install docker docker-compose docker-machine
-```
-
-Check docker version and info
-
-```
-docker version
-docker info
 ```
 
 ## Step 0.5 setup docker machine
@@ -39,6 +32,13 @@ docker-machine start default
 Config `default` machine
 ```
 eval $(docker-machine env default)
+```
+
+## 0.99 Check docker version and info
+
+```
+docker version
+docker info
 ```
 
 ## Run your very first docker container
