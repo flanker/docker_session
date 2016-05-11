@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/jwt_generator'
+
+result = JwtGenerator.new.generate ARGV.first
+puts "Text is: #{ARGV.first}"
+puts "JWT Token is: #{result}"
