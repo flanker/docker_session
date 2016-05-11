@@ -23,6 +23,24 @@ docker version
 docker info
 ```
 
+## Step 0.5 setup docker machine
+
+Create a `default` machine
+
+```
+docker-machine create -d virtualbox default
+```
+
+Start `default` machine
+```
+docker-machine start default
+```
+
+Config `default` machine
+```
+eval $(docker-machine env default)
+```
+
 ## Run your very first docker container
 
 ```
