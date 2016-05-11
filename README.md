@@ -75,5 +75,16 @@ docker run fengzhichao/ruby_app test_string
 
 ## Run rails app
 
+Change directory to `1_rails_app`, run
+
 ```
+docker-compose run --service-port web
+```
+
+The rails app should be available on http://DOCKER_MACHINE_IP:4000/
+
+To get docker machine ip, run
+
+```
+docker-machine ip default
 ```
