@@ -75,7 +75,7 @@ docker run fengzhichao/ruby_app test_string
 
 ## Run rails app
 
-Change directory to `1_rails_app`, run
+Checkout this codebase and change directory to `1_rails_app`, run
 
 ```
 docker-compose run --service-port web
