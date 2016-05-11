@@ -24,7 +24,7 @@ Create a `default` machine
 docker-machine create -d virtualbox default
 ```
 
-Start `default` machine
+Start `default` machine if it is not running
 ```
 docker-machine start default
 ```
