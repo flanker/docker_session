@@ -9,7 +9,7 @@ base:
     RAILS_ENV: development
     DB_HOST: devdb
     DB_DATABASE: app_development
-    DB_USER: db_user
+    DB_USERNAME: db_user
     DB_PASSWORD: db_password
 
 web:
