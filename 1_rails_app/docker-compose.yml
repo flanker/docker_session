@@ -28,6 +28,14 @@ rake:
     - devdb
   entrypoint: rake
 
+rails:
+  extends:
+    file: docker-compose.yml
+    service: base
+  links:
+    - devdb
+  entrypoint: rails
+
 devdb:
   image: postgres
   environment:

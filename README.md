@@ -88,3 +88,9 @@ To get docker machine ip, run
 ```
 docker-machine ip default
 ```
+
+Run database migration
+
+```
+docker-compose run rake db:migrate
+```
